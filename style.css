@@ -6,6 +6,7 @@ html{
 *::after,
 *::before{
   box-sizing: inherit;
+  overflow-y: hidden;
 }
 
 ul[class],
