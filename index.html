@@ -11,22 +11,22 @@
   <link
     href="https://fonts.googleapis.com/css2?family='Roboto':ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css" />
+
   <!-- Добавляем тему по умолчанию из CDN -->
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick-theme.css" />
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.9.0/slick/slick.min.js"></script> -->
 
   <title>Самокаты – Яндекс Go</title>
 </head>
 <style type="text/css">
   body {
+    position: relative;
     background: #ffde40;
   }
 
@@ -200,14 +200,6 @@
     font-size: 13px;
   }
 
-  .wrapper {
-    padding-top: 50px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 2650px;
-  }
-
-
 
   @media screen and (max-width: 600px) {
     .content-wrapper {
@@ -225,6 +217,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      max-width: 1110px;
     }
 
     .header .header-items {
@@ -263,31 +256,31 @@
 </style>
 
 <body>
+  <div class="header-wrapper">
+    <header class="header flex justify_around">
+      <div class="header-logo">
+        <img src="./img/logo.svg" alt="logo">
+      </div>
+      <ul class="header-items flex justify_around">
+        <li class="header-item">
+          <a class="item-link color_blac text16" href="">Как арендовать самокат</a>
+        </li>
+        <li class="header-item">
+          <a class="item-link color_blac text16" href="">Катайтесь с Плюсом</a>
+        </li>
+        <li class="header-item">
+          <a class="item-link color_blac text16" href="">Катайтесь аккуратно</a>
+        </li>
+        <li class="header-item">
+          <a class="item-link color_blac text16" href="">Где самокаты?</a>
+        </li>
+      </ul>
+      <div class="flex align">
+        <button class="header-btn text20">Скачать</button>
+      </div>
+    </header>
+  </div>
   <div class="wrapper">
-    <div class="content-wrapper">
-      <header class="header flex width justify_around">
-        <div class="header-logo">
-          <img src="./img/logo.svg" alt="logo">
-        </div>
-        <ul class="header-items flex justify_around">
-          <li class="header-item">
-            <a class="item-link color_blac text16" href="">Как арендовать самокат</a>
-          </li>
-          <li class="header-item">
-            <a class="item-link color_blac text16" href="">Катайтесь с Плюсом</a>
-          </li>
-          <li class="header-item">
-            <a class="item-link color_blac text16" href="">Катайтесь аккуратно</a>
-          </li>
-          <li class="header-item">
-            <a class="item-link color_blac text16" href="">Где самокаты?</a>
-          </li>
-        </ul>
-        <div class="flex align">
-          <button class="header-btn text20">Скачать</button>
-        </div>
-      </header>
-    </div>
     <main class="main">
       <div class="content-wrapper">
         <section class="greeting position">
@@ -435,8 +428,6 @@
 
         </section>
         <section class="season-group__content">
-          <div id="plus"></div>
-          <div class="lower-line"></div>
           <div class="season-custom-html">
             <img class="plus_image"
               src="https://avatars.mds.yandex.net/get-lpc/1368426/f3f68bd0-fba4-4318-ad1c-2649bd5906ae/orig">
@@ -478,7 +469,7 @@
             </div>
           </div>
         </section>
-        <section>
+        <!-- <section>
           <div class="video-slider">
             <div class="video-slider__item video-slider__item--1">
               <video class="video-block" controls="" preload="auto" pip="false">
@@ -581,7 +572,7 @@
               </video>
             </div>
           </div>
-        </section>
+        </section> -->
         <section class="katajtes-nezhno">
           <div class="katajtes-nezhno__block">
             <div class="katajtes-nezhno__block-white">
@@ -665,79 +656,81 @@
                 в&nbsp;поддержку
               </div>
             </div>
-            <div style="height: 430px"></div>
+            <div style="height: 490px;"></div>
           </div>
         </section>
       </div>
+      <div id="plus">
+        <div class="lower-line"></div>
+      </div>
     </main>
     <footer class="footer">
-      <div class="content-wrapper">
-        <section class="where">
-          <div class="where__block">
-            <div class="st-styled-text">
-              <div>
-                <div class="title64 where__styled-title">
-                  Где есть самокаты
-                </div>
-                <div class="text32 where__styled-text">
-                  Самокаты постепенно появляются в&nbsp;разных районах Москвы. Карта в&nbsp;приложении покажет, где
-                  взять самокат&nbsp;— и&nbsp;на&nbsp;какой парковке его можно оставить
-                </div>
-                <img src="https://avatars.mds.yandex.net/get-lpc/1520633/bd3093ef-6bb8-4953-8680-2dca3bd1573b/orig"
-                  style="display: block; pointer-events: none; width: 100%; border-radius: 56px;">
+      <section class="where">
+        <div class="where__block">
+          <div class="st-styled-text">
+            <div>
+              <div class="title64 where__styled-title">
+                Где есть самокаты
               </div>
+              <div class="text32 where__styled-text">
+                Самокаты постепенно появляются в&nbsp;разных районах Москвы. Карта в&nbsp;приложении покажет, где
+                взять самокат&nbsp;— и&nbsp;на&nbsp;какой парковке его можно оставить
+              </div>
+              <img src="https://avatars.mds.yandex.net/get-lpc/1520633/bd3093ef-6bb8-4953-8680-2dca3bd1573b/orig"
+                style="display: block; pointer-events: none; width: 100%; border-radius: 56px;">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-wrapper">
+        <div class="footer-block" style="margin-left: 100px;">
+          <div class="footer-styled-text">
+            <div class="title64" style="margin-bottom: 32px; max-width: 455px;">
+              Скачайте приложение
+            </div>
+            <div class="text32" style="max-width: 455px; padding-bottom: 48px">
+              Наведите камеру на QR-код для загрузки приложения
+            </div>
+          </div>
+        </div>
+        <section class="footer-qr">
+          <div class="footer-custom-html">
+            <div style="padding: 0 17px 164px;">
+              <img src="https://avatars.mds.yandex.net/get-lpc/1370085/d9f75df2-ba50-4000-83ea-1f6db39c9d15/orig"
+                style="display: block; pointer-events: none; width: 202px; height: auto; margin: 0px 8%;">
             </div>
           </div>
         </section>
-        <section class="footer-wrapper">
-          <div class="footer-block" style="margin-left: 100px;">
-            <div class="footer-styled-text">
-              <div class="title64" style="margin-bottom: 32px; max-width: 455px;">
-                Скачайте приложение
-              </div>
-              <div class="text32" style="max-width: 455px; padding-bottom: 48px">
-                Наведите камеру на QR-код для загрузки приложения
-              </div>
-            </div>
-          </div>
-          <section class="footer-qr">
-            <div class="footer-custom-html">
-              <div style="width: 954px; padding: 0 17px 164px; margin: auto; box-sizing: border-box;">
-                <img src="https://avatars.mds.yandex.net/get-lpc/1370085/d9f75df2-ba50-4000-83ea-1f6db39c9d15/orig"
-                  style="display: block; pointer-events: none; width: 202px; height: auto">
-              </div>
-            </div>
-          </section>
-          <section class="footer-section__bottom">
-            <div style="font-family: 'Roboto'; font-size: 13px; line-height: 16px; color: #21201f; width: 600px;">
-              Электросамокаты Яндекс Go — сервис аренды электросамокатов на условиях, указанных <br> на <a
-                class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/samokaty/" target="_blank"
-                data-smooth-scroll="true">yandex.ru/legal/samokaty</a>. Дополнительная опция «Абонемент на самокаты»
-              оформляется <br> на условиях документа «Условия подписки на Яндекс Плюс»<br>
-              (<a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/yandex_plus_conditions"
-                target="_blank" data-smooth-scroll="true">yandex.ru/legal/yandex_plus_conditions</a>); есть ограничения,
-              подробнее см. здесь:
-              <br> <a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/yandex_plus_opzii_list/"
-                target="_blank" data-smooth-scroll="true">yandex.ru/legal/yandex_plus_opzii_list</a>.
-              В групповой поездке можно арендовать не более <br>
-              3 самокатов на одного пользователя. Условия подписки на Яндекс Плюс:
-              <br> <a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/yandex_plus_conditions/"
-                target="_blank" data-smooth-scroll="true">yandex.ru/legal/yandex_plus_conditions</a>.
-              Условия программы лояльности «Яндекс Плюс Кешбэк»:
-              <br> <a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/plus_loyalty/"
-                target="_blank" data-smooth-scroll="true">yandex.ru/legal/plus_loyalty</a>.
-              Пользователю начисляется 5% кешбэка баллами, но не более 1000
-              <br> баллов за одну поездку. Для получения и использования
-              баллов требуется активная подписка <br>
-              Яндекс Плюс или иная, ее включающая. Баллы не являются денежными средствами, при <br>
-              использовании баллов предоставляется скидка. 0+
-            </div>
-            <div class="footer-section__bottom-span">
-              <span>© 2022</span>
-              <span style="font-weight: bold;">ООО «Яндекс.Микромобильность</span>
-            </div>
-          </section>
-        </section>
+      </section>
+      <section class="footer-section__bottom">
+        <div style="font-family: 'Roboto'; font-size: 13px; line-height: 16px; color: #21201f; width: 600px;">
+          Электросамокаты Яндекс Go — сервис аренды электросамокатов на условиях, указанных <br> на <a
+            class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/samokaty/" target="_blank"
+            data-smooth-scroll="true">yandex.ru/legal/samokaty</a>. Дополнительная опция «Абонемент на самокаты»
+          оформляется <br> на условиях документа «Условия подписки на Яндекс Плюс»<br>
+          (<a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/yandex_plus_conditions"
+            target="_blank" data-smooth-scroll="true">yandex.ru/legal/yandex_plus_conditions</a>); есть ограничения,
+          подробнее см. здесь:
+          <br> <a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/yandex_plus_opzii_list/"
+            target="_blank" data-smooth-scroll="true">yandex.ru/legal/yandex_plus_opzii_list</a>.
+          В групповой поездке можно арендовать не более <br>
+          3 самокатов на одного пользователя. Условия подписки на Яндекс Плюс:
+          <br> <a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/yandex_plus_conditions/"
+            target="_blank" data-smooth-scroll="true">yandex.ru/legal/yandex_plus_conditions</a>.
+          Условия программы лояльности «Яндекс Плюс Кешбэк»:
+          <br> <a class="legal-link" style="color: #21201f;" href="https://yandex.ru/legal/plus_loyalty/"
+            target="_blank" data-smooth-scroll="true">yandex.ru/legal/plus_loyalty</a>.
+          Пользователю начисляется 5% кешбэка баллами, но не более 1000
+          <br> баллов за одну поездку. Для получения и использования
+          баллов требуется активная подписка <br>
+          Яндекс Плюс или иная, ее включающая. Баллы не являются денежными средствами, при <br>
+          использовании баллов предоставляется скидка. 0+
+        </div>
+        <div class="footer-section__bottom-span">
+          <span>© 2022</span>
+          <span style="font-weight: bold;">ООО «Яндекс.Микромобильность</span>
+        </div>
+      </section>
     </footer>
   </div>
   <script type="text/javascript">
